@@ -1,0 +1,21 @@
+def calculate_vat(amount, vat_rate=0.17):
+  """Calculates VAT (Value Added Tax) for a given amount.
+
+  Args:
+      amount (float): The base amount on which VAT is applied.
+      vat_rate (float, optional): The VAT rate (default: 0.17). Defaults to 0.17.
+
+  Returns:
+      float: The total amount including VAT.
+  """
+
+  vat_amount = amount * vat_rate
+  total_amount = amount + vat_amount
+  return total_amount
+
+# Example usage
+amount = 1000.0
+vat_rate = 0.16  # Assuming a different VAT rate
+total_amount = calculate_vat(amount, vat_rate)
+
+print(f"Total amount with VAT ({vat_rate * 100:.2f}%): {total_amount:.2f}")
