@@ -1,0 +1,24 @@
+fn calculate_vat(amount: f64, vat_rate: f64) -> f64 {
+  """Calculates VAT (Value Added Tax) for a given amount.
+
+  Args:
+      amount: The base amount on which VAT is applied.
+      vat_rate: The VAT rate.
+
+  Returns:
+      The total amount including VAT.
+  """
+
+  let vat_amount = amount * vat_rate;
+  let total_amount = amount + vat_amount;
+  total_amount
+}
+
+fn main() {
+  let amount = 1000.0;
+  let vat_rate = 0.16; // Assuming a different VAT rate
+
+  let total_amount = calculate_vat(amount, vat_rate);
+
+  println!("Total amount with VAT ({:.2}%): {:.2}", vat_rate * 100.0, total_amount);
+}
